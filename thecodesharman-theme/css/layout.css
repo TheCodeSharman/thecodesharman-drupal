@@ -1,0 +1,190 @@
+/* Responsive layout for The Code Sharman theme */
+
+/* By setting the background color to default to grey this
+   enabled the footer to extend to infinity visually */
+body {
+  background-color: #aaaaaa;
+}
+
+/* generic padding */
+.section {
+  background-color: white;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+/* The header */
+#header {
+  padding-left: 3.0em;
+  padding-top: 1.3em;
+  padding-bottom: 3.5em;
+  background-image: url("../images/background.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  border-bottom: solid 6px white;
+
+}
+
+/* headings */
+#site-name {
+  font-family: Tahoma, sans;
+  font-weight: normal;
+  color: #4c4c4c;
+  font-size: 200%;
+}
+/* turn off default link attributes on the title */
+#site-name a {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+}
+
+#site-name,
+#site-slogan {
+    text-shadow: 0.1em 0.1em 0.05em white , -0.1em -0.1em 0.05em white, 0.1em -0.1em 0.05em white, -0.1em 0.1em 0.05em white;
+}
+
+#site-slogan {
+  font-family: Tahoma, sans;
+  font-weight: normal;
+  color: #81a84e;
+  font-size: 120%;
+}
+
+/* navigation */
+#navigation {
+  padding-right: 1.5em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  text-align: right;
+  border-top: solid thin black;
+  border-bottom: solid thin black;
+  background: rgb(230,240,163); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(230,240,163,1) 0%, rgba(210,230,56,1) 50%, rgba(195,216,37,1) 51%, rgba(219,240,67,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,240,163,1)), color-stop(50%,rgba(210,230,56,1)), color-stop(51%,rgba(195,216,37,1)), color-stop(100%,rgba(219,240,67,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+}
+#navigation li a.active {
+  color: black;
+  font-family: Tahoma, sans;
+}
+
+#navigation h2 {
+  display: none;
+}
+
+/* default main section */
+.content-middle {
+  margin-top: 1.2em;
+  margin-left: 2.0em;
+  margin-right: 2.0em;
+}
+
+/* main content styles */
+.region-content {
+  line-height: 1.6em;
+}
+
+/* footer */
+#footer { 
+  background-color: #aaaaaa;
+  border-top: solid thin #dadada;
+  text-align: right;
+  color: #5a5a5a;
+}
+
+#footer .copyright {
+  text-align: center;
+  width: 50%;
+}
+
+#footer > div {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.logged-in #footer #login { display: none; }
+.logged-in #footer #logout { display: inherit !important; }
+
+.block-menu h2 {
+  display: none;
+}
+/* Desktop sized window make use of extra space to put columns in */
+@media only screen and (min-width: 60em) {
+  body { 
+    min-width: 60em; 
+    }
+  
+  #header {
+    padding-top: 2.6em;
+    padding-bottom: 2.4em;
+  }
+  
+  #main {
+    min-height: 45em;
+    position: relative;
+  }
+  .sidebar {
+    margin-top: 1.2em;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  /* Styles for various combinations of side bar presence */
+  .one-sidebar .content-middle,
+  .two-sidebars .content-middle {
+    margin-left: 15%;
+  }
+  
+  .sidebar-second .content-middle,
+  .two-sidebars .content-middle {
+    margin-right: 30%;
+  }
+  
+  .one-sidebar #sidebar-first,
+  .two-sidebars #sidebar-first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11%;
+  }
+  
+  .sidebar-second #sidebar-second,
+  .two-sidebars #sidebar-second {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 20%;
+    bottom: 0;
+    border-left: solid thin #dadada;
+  }
+  
+  /* block menus: remove some default styling */
+  .block-menu {
+    font-family: Tahoma, sans;
+    font-weight: normal;
+    
+  }
+  .block-menu ul, .block-menu ol {
+    padding-left: 0;
+  }
+  .block-menu li.leaf, .block-menu li.collapsed {
+    list-style-image: none;
+    list-style-type: none;
+    line-height: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  #header {
+    padding-left: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+    background-position: 10% 15%;
+  }
+}

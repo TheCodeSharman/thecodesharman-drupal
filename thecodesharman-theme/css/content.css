@@ -1,0 +1,55 @@
+/*
+        Theme colour palette:
+        
+        #81a84e                 Bright green
+        #c0ca1f                 Darker green    
+        #76aa35                 Yellowish
+        #4c4c4c                 Black
+        #8c8c8c                 Grey
+*/
+
+
+/* Styles for the content */
+body {
+  color: #2c2c2c;
+  font-family: serif;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* Link styling by default */
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: thin dashed rgba(255,0,0,0.25);
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: thin dashed rgba(255,0,0,0.8);
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  color: #81a84e;
+
+  font-family: Tahoma, sans;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+h1 { font-size: 110%; }
+h2 { font-size: 100%; }
+h3 { font-size: 90%; }
+h4 { font-size: 80%; }
+h5 { font-size: 70%; }
+h6 { font-size: 60%; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  margin: 0;
+}
